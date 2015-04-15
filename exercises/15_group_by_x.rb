@@ -1,4 +1,10 @@
-
+def group_by_x(collection)
+  result = Hash.new { [] }
+  collection.each do |item|
+    result[item[:x]] = result[item[:x]] << item
+  end
+  result
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'

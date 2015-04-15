@@ -1,4 +1,10 @@
-
+def reduce(input)
+  word = ''
+  input.each do |f|
+    word << f
+  end
+  word
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'

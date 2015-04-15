@@ -1,4 +1,13 @@
-
+def find_by_id(collection, id)
+    # collection.find {|item| item[:id] == id}
+    result = []
+    collection.each do |item|
+      if item[:id] == id
+        result << item
+      end
+    end
+    result[result.count - 1]
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'

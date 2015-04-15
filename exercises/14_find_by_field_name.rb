@@ -1,4 +1,13 @@
-
+def find_by_field_name(collection, key, value)
+  # collection.find {|item| item[key] == value}
+  results = []
+  collection.each do |item|
+    if item[key] == value
+      results << item
+    end
+  end
+  results[results.count - 1]
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'

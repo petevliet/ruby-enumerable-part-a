@@ -1,4 +1,10 @@
-
+def group_by(input, key)
+  result = Hash.new { [] }
+  input.each do |a|
+    result[a[key]] = result[a[key]] << a
+  end
+  result
+end
 # ------ code above this line ------
 
 require 'rspec/autorun'
